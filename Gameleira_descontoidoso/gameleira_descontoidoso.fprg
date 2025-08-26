@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="descontoidoso"/>
+        <attribute name="authors" value="vinicius.sgameleira"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-08-26 03:29:07 "/>
+        <attribute name="created" value="dmluaWNpdXMuc2dhbWVsZWlyYTtTQU4wNjc0NDIxVzExLTE7MjAyNS0wOC0yNjsiMDM6MTc6NTEgIjs0MDMy"/>
+        <attribute name="edited" value="dmluaWNpdXMuc2dhbWVsZWlyYTtTQU4wNjc0NDIxVzExLTE7MjAyNS0wOC0yNjsiMDM6Mjk6MDcgIjsxOzQxNDQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="idade" type="Integer" array="False" size=""/>
+            <declare name="desconto, valorAPagar, compras" type="Real" array="False" size=""/>
+            <declare name="nome" type="String" array="False" size=""/>
+            <output expression="&quot;Nome do Cliente:&quot;" newline="True"/>
+            <input variable="nome"/>
+            <output expression="&quot;Valor da Compra (R$):&quot;" newline="True"/>
+            <input variable="compras"/>
+            <output expression="&quot;Idade do Cliente:&quot;" newline="True"/>
+            <input variable="idade"/>
+            <assign variable="desconto" expression="0"/>
+            <if expression="(idade &gt;= 65) &amp;&amp; (compras &gt;= 1000)">
+                <then>
+                    <assign variable="desconto" expression="compras * 0.10"/>
+                    <assign variable="valorAPagar" expression="compras - desconto"/>
+                    <output expression="&quot;Nome do Cliente: &quot; &amp; nome" newline="True"/>
+                    <output expression="&quot;Idade: &quot; &amp; idade" newline="True"/>
+                    <output expression="&quot;Valor das Compras: R$&quot; &amp; compras" newline="True"/>
+                    <output expression="&quot;Valor a pagar: R$ &quot; &amp; valorAPagar" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="valorAPagar" expression="compras - desconto"/>
+                    <output expression="&quot;Nome do Cliente: &quot; &amp; nome" newline="True"/>
+                    <output expression="&quot;Idade: &quot; &amp; idade" newline="True"/>
+                    <output expression="&quot;Valor das Compras: R$&quot; &amp; compras" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="tabuada"/>
+        <attribute name="authors" value="vinicius.sgameleira"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-30 05:29:53 "/>
+        <attribute name="created" value="dmluaWNpdXMuc2dhbWVsZWlyYTtTQU4wNjc0MzkxVzExLTE7MjAyNS0wNC0zMDsiMDQ6Mjc6MzYgIjs0MDM0"/>
+        <attribute name="edited" value="dmluaWNpdXMuc2dhbWVsZWlyYTtTQU4wNjc0MzkxVzExLTE7MjAyNS0wNC0zMDsiMDU6Mjk6NTMgIjszOzQxNDY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tabuada, contador, resultado" type="Integer" array="False" size=""/>
+            <assign variable="contador" expression="0"/>
+            <output expression="&quot;Digite o n&#250;mero que quer multiplicar:&quot;" newline="True"/>
+            <input variable="tabuada"/>
+            <while expression="contador &lt;= 10">
+                <assign variable="resultado" expression="tabuada * contador"/>
+                <output expression="tabuada &amp; &quot; X &quot; &amp; contador &amp; &quot; = &quot; &amp; resultado" newline="True"/>
+                <assign variable="contador" expression="contador + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

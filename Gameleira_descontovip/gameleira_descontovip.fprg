@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="prj_descontovip"/>
+        <attribute name="authors" value="vinicius.sgameleira"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-08-26 03:17:25 "/>
+        <attribute name="created" value="dmluaWNpdXMuc2dhbWVsZWlyYTtTQU4wNjc0NDIxVzExLTE7MjAyNS0wOC0yNjsiMDI6NTA6MDAgIjs0MDIy"/>
+        <attribute name="edited" value="dmluaWNpdXMuc2dhbWVsZWlyYTtTQU4wNjc0NDIxVzExLTE7MjAyNS0wOC0yNjsiMDM6MTc6MjUgIjs0OzQxNDQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tipo, nome" type="String" array="False" size=""/>
+            <declare name="compra, valorAPagar, desconto" type="Real" array="False" size=""/>
+            <output expression="&quot;Nome do Cliente:&quot;" newline="True"/>
+            <input variable="nome"/>
+            <output expression="&quot;Valor da Compra (R$):&quot;" newline="True"/>
+            <input variable="compra"/>
+            <output expression="&quot;Tipo de Cliente: Comum ou Vip&quot;" newline="True"/>
+            <input variable="tipo"/>
+            <assign variable="desconto" expression="0"/>
+            <if expression="(tipo = &quot;Vip&quot;) || (tipo = &quot;vip&quot;)|| (tipo = &quot;VIP&quot;)">
+                <then>
+                    <assign variable="desconto" expression="compra * 0.10"/>
+                    <assign variable="valorAPagar" expression="compra - desconto"/>
+                    <output expression="&quot;Nome do cliente: &quot; &amp; nome" newline="True"/>
+                    <output expression="&quot;Valor das compras: R$ &quot; &amp; compra" newline="True"/>
+                    <output expression="&quot;Valor a pagar: R$ &quot; &amp; valorAPagar" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="valorAPagar" expression="compra - desconto"/>
+                    <assign variable="valorAPagar" expression="compra - desconto"/>
+                    <output expression="&quot;Nome do cliente: &quot; &amp; nome" newline="True"/>
+                    <output expression="&quot;Valor das compras: R$ &quot; &amp; compra" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
